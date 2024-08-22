@@ -5,13 +5,13 @@ import { CartContext } from '../../Context/CartContext'
 
 export default function RecentDataProduct({product}) {
 
-   let {addProductToCart} = useContext(CartContext);
+   let {addProductToCart , AddHeartList} = useContext(CartContext);
 
 
   
   return <>
   
-    <div className=" mx-auto rounded-md px-4 p-4">
+    <div className=" mx-auto product rounded-md px-4 p-4">
     <div className="flex flex-wrap ">
         <div>
       <Link to={`/productdetails/${product.id}`}>
@@ -24,7 +24,7 @@ export default function RecentDataProduct({product}) {
         </div></Link>
       <div className="flex justify-between gap-4">
         <button onClick={()=> addProductToCart(product.id)} className='btn bg-main w-full text-white rounded'>Add To Cart</button>
-        <li className='relative list-none ' ><i className="fa-solid fa-heart  hover:text-red-500"></i><span className=' text-white left-1/3 bottom-1'></span></li>
+        <button className='list-none' onClick={()=> AddHeartList(product.id)}><li><i className='fa-solid text-3xl fa-heart hover:text-red-600 '></i></li></button>
       </div>
     </div>
     </div>      

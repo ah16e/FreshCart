@@ -19,7 +19,7 @@ export default function Cart() {
     
     <h1 className="text-3xl">Cart</h1>
       {loading ? <div className='flex justify-center items-center'><Loading /> </div>: <div>
-      {cart ? <div className="relative grid  sm:grid-cols-1 mx-auto shadow-md sm:rounded-lg">
+      {cart ? <div className="relative grid pt-4 pb-14  sm:grid-cols-1 mx-auto shadow-md sm:rounded-lg">
   <table className=" text-sm text-left mb-2 rtl:text-right text-gray-500 dark:text-gray-400">
     <thead className="text-xs text-gray-700 uppercase bg-gray-50  dark:text-gray-400">
       <tr>

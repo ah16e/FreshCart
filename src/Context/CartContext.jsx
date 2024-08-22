@@ -118,7 +118,6 @@ import toast from "react-hot-toast";
                 let {data} = await axios.get(`https://ecommerce.routemisr.com/api/v1/cart` ,{
                     headers
                 });
-                // console.log(data);
                 
                 setCart(data)
                 setLoading(false)
@@ -169,7 +168,7 @@ import toast from "react-hot-toast";
                     headers
                 });
                 
-                setCart(null)
+                setCart(data)
                 setLoading(false)
                 
             } catch (error) {

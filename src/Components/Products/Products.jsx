@@ -24,7 +24,7 @@ export default function Products() {
       getDataProduct()
     } , [])
   return <>
-      {products.length?  <div className="grid sm:grid-cols-2 grid-cols-1 xl:grid-cols-6 md:grid-cols-4 lg:grid-cols-6 gap-6">
+      {products.length?  <div className="grid sm:grid-cols-2 pb-32 grid-cols-1 xl:grid-cols-6 md:grid-cols-4 lg:grid-cols-6 gap-6">
      {products.map((product , index)=> <RecentDataProduct key={index} product={product}/>)}
       </div> :<div className="text-center flex justify-center py-16">
       <Loading/>
